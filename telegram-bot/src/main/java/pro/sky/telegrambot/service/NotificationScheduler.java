@@ -12,6 +12,7 @@ import pro.sky.telegrambot.model.NotificationTask;
 import pro.sky.telegrambot.repository.NotificationTaskRepository;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 
@@ -25,9 +26,9 @@ public class NotificationScheduler {
     @Autowired
     private NotificationTaskRepository notificationTaskRepository;
 
-    @Scheduled(fixedDelay = 60000)
+    @Scheduled(cron = "0 0/1 * * * *")
     public void checkAndSendReminders() {
-        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES);
 
         List<NotificationTask> tasks = notificationTaskRepository.findByDateTimeBefore(now);
 
