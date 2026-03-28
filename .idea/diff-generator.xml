@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DiffGenerationConfig">
+    <option name="sourceModelValue" value="telegram-bot:telegram-bot" />
+    <option name="targetDbValue" value="1e1adbe9-4cb2-43c4-bd49-365450985b69" />
+    <option name="updateChangeLogPath" value="telegram-bot/src/main/resources/liquibase/changelog-master.yml" />
+    <option name="updateDbConnectionName" value="f6f0e211-412c-4fc1-adfd-b486fde20830" />
+  </component>
+</project>
